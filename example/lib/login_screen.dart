@@ -52,7 +52,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return FlutterLogin(
       title: Constants.appName,
-      logo: const AssetImage('assets/images/ecorp.png'),
+      logo: AssetImage('assets/images/ecorp.png'),
       logoTag: Constants.logoTag,
       titleTag: Constants.titleTag,
       navigateBackAfterRecovery: true,
@@ -73,6 +73,8 @@ class LoginScreen extends StatelessWidget {
         ),
         LoginProvider(
           icon: FontAwesomeIcons.google,
+          
+          
           label: 'Google',
           callback: () async {
             return null;
@@ -80,6 +82,7 @@ class LoginScreen extends StatelessWidget {
         ),
         LoginProvider(
           icon: FontAwesomeIcons.githubAlt,
+          label: 'Github',
           callback: () async {
             debugPrint('start github sign in');
             await Future.delayed(loginTime);
@@ -284,9 +287,9 @@ class IntroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-        const Text.rich(
+        Text.rich(
           TextSpan(
             children: [
               TextSpan(
@@ -298,10 +301,10 @@ class IntroWidget extends StatelessWidget {
               ),
             ],
           ),
-          textAlign: TextAlign.justify,
+         // textAlign: TextAlign.justify,
         ),
         Row(
-          children: const <Widget>[
+          children: <Widget>[
             Expanded(child: Divider()),
             Padding(
               padding: EdgeInsets.all(8.0),

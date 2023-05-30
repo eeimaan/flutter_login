@@ -660,12 +660,12 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
       scale: _buttonScaleAnimation,
       child: Row(
         children: <Widget>[
-          const Expanded(child: Divider()),
+          //const Expanded(child: Divider()),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(messages.providersTitleSecond),
+           // child: Text(messages.providersTitleSecond),
           ),
-          const Expanded(child: Divider()),
+         // const Expanded(child: Divider()),
         ],
       ),
     );

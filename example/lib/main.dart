@@ -4,6 +4,7 @@ import 'package:login_example/dashboard_screen.dart';
 import 'package:login_example/login_screen.dart';
 import 'package:login_example/transition_route_observer.dart';
 
+
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
     SystemUiOverlayStyle(
@@ -20,14 +21,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Login Demo',
       theme: ThemeData(
         textSelectionTheme:
             const TextSelectionThemeData(cursorColor: Colors.orange),
-        // fontFamily: 'SourceSansPro',
+        fontFamily: 'SourceSansPro',
         textTheme: TextTheme(
           displaySmall: const TextStyle(
             fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold,
             fontSize: 45.0,
             // fontWeight: FontWeight.w400,
             color: Colors.orange,
@@ -35,6 +38,7 @@ class MyApp extends StatelessWidget {
           labelLarge: const TextStyle(
             // OpenSans is similar to NotoSans but the uppercases look a bit better IMO
             fontFamily: 'OpenSans',
+           
           ),
           bodySmall: TextStyle(
             fontFamily: 'NotoSans',
